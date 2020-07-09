@@ -104,6 +104,17 @@ html {
     margin-top: -3px;
     border-radius: 0 2px 2px 0;
     margin-left: -3px;
+    
+}
+
+/*------------------------------------------------Recipe Cards*/
+
+.card-image {
+    width: 150px;
+    height: 150px;
+    background: no-repeat center center fixed;
+    overflow: hidden;
+    object-fit: cover;
 }
 
 /*------------------------------------------------Media Queries*/
@@ -116,4 +127,8 @@ html {
     .hero-image {
         height: 250px;
     }
+}
+
+.error-text {
+    
 }

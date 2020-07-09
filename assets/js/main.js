@@ -2,12 +2,12 @@ function recipeInformationHTML(results) {
 
     var arr = [];
     let i;
-    var recipes = $("results['results]");
+    var recipes = $(results['results']);
 
     for(i = 0; i < recipes.length; i++) {
         arr.push(`
             <div class="recipe-card">
-                <img class="card-image" src="${results['results'][i]['thumbnail']}" alt="${results['results'][i]['title']}"/>
+                <img class="card-image" src="${results['results'][i]['thumbnail']}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'"/>
                 <a class="card-title" href="${results['results'][i]['href']}" target="_blank">${results['results'][i]['title']}</a>
             </div>
         `);
@@ -15,7 +15,7 @@ function recipeInformationHTML(results) {
     return arr;
 }
 
-function fetchRecipeInformation() {
+function fetchRecipeInformation(event) {
 
     const api = "https://recipe-puppy.p.rapidapi.com/";
     var ingredients = $("#ingredients").val();
@@ -30,12 +30,14 @@ function fetchRecipeInformation() {
             $("#recipe").html(recipeInformationHTML(ingredientsData));
         }, function(errorResponse) {
             if(errorResponse.status === 404) {
-                $("#recipe").html(`<h2>No recipe found</h2>`);
+                $("#recipe").html(`<h2 class="error-text">No recipe found</h2>`);
+            } else if(errorResponse.status === 500) {
+                $("#recipe").html(`<h2 class="error-text">Server error</h2>`);
             } else if(errorResponse === 403) {
                 var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset')*1000);
-                $("#recipe").html(`<h4>Too many requests, please wait until ${resetTime.toLocaleDateString()}</h4>`);
+                $("#recipe").html(`<h4 class="error-text>Too many requests, please wait until ${resetTime.toLocaleDateString()}</h4>`);
             } else {
-                $("#recipe").html(`<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
+                $("#recipe").html(`<h2 class="error-text>Error: ${errorResponse.responseJSON.message}</h2>`);
             }
         }
     );
