@@ -68,9 +68,9 @@ High-resolution wireframes can be found [here](./assets/mockups/recipeasy-mockup
 
 * [Adobe Stock](https://www.stock.adobe.com/) - Used public domain images for site background and stock images.
 
-* [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) - Used to create a color palette for site.
-
 * [Recipe Puppy](https://rapidapi.com/brianiswu/api/recipe-puppy) - API of recipe data used for the site.
+
+* [Loading](https://loading.io/) - Used to create loading .gif.
 
 * [Markup Validation](https://validator.w3.org/) - Used to validate HTML code.
 

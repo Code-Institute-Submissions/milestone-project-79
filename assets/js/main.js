@@ -27,6 +27,8 @@ function fetchRecipeInformation(event) {
         return;
     }
 
+    $("#recipe").html(`<img src="./assets/img/loading.gif" alt="loading..." width="24" height="24"/>`)
+
     $.when(
         $.getJSON(`${api}?p=${page}&i=${ingredients}&rapidapi-key=${apiKey}`)
     ).then(
