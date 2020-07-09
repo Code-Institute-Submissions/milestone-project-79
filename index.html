@@ -38,7 +38,7 @@
             </nav>
         </header>
 
-        <div class="container search-wrapper">
+        <div class="container-fluid search-wrapper">
             <div class="search-box box-shadow">
                 <h1 class="search-title text-center">Enter Your Ingredients!</h1>
 
@@ -54,9 +54,21 @@
 
     <main class="container-fluid">
         <section>
-            <div id="recipe"></div>
-            <button class="previous btn box-shadow pagination-button" onclick="prevPage()">Prev</button>
-            <button class="next btn box-shadow pagination-button" onclick="nextPage()">Next</button>
+            <div class="container-fluid">
+                <div class="row main-section">
+                    <div class="col-md-1">
+                        <button class="previous btn box-shadow pagination-button" onclick="prevPage()">Prev</button>
+                    </div>
+
+                    <div class="col-md-10">
+                        <div id="recipe"></div>
+                    </div>
+
+                    <div class="col-md-1">
+                        <button class="next btn box-shadow pagination-button" onclick="nextPage()">Next</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 

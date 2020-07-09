@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 
-html {
-    font-size: 100%;
-}
-
 .hero-wrapper {
     height: 350px;
 }
@@ -95,7 +91,7 @@ html {
 
 #ingredients {
     height: 38px;
-    width: 500px;
+    width: 75%;
     border-radius: 2px 0 0 2px;
     border: 1px solid #929293;
     color: #333333;
@@ -111,17 +107,49 @@ html {
 
 /*------------------------------------------------Recipe Cards*/
 
+.main-section {
+    align-items: center;
+}
+
+#recipe {
+    margin-top: 60px;
+    padding: 0 50px;
+}
+
+.recipe-card {
+    display: inline-block;
+    margin: 30px 10px 0px;
+}
+
 .card-image {
-    width: 150px;
+    width: 250px;
     height: 150px;
     background: no-repeat center center fixed;
     overflow: hidden;
     object-fit: cover;
 }
 
+.card-title-box {
+    width: 150px;
+    height: 30px;
+}
+
+.card-title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: none;
+    color: #929293;
+    margin: 12px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+}
+
+
 .pagination-button {
     background-color: #8ea939;
     border-radius: 2px;
+    position: absolute;
 }
 
 /*------------------------------------------------Media Queries*/
@@ -133,6 +161,15 @@ html {
 
     .hero-image {
         height: 250px;
+    }
+
+    .recipe-card {
+        display: block;
+    }
+
+    #recipe {
+        padding: 20px;
+        margin: 0;
     }
 }
 

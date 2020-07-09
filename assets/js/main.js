@@ -19,16 +19,19 @@ function nextPage() {
 }
 
 function recipeInformationHTML(results) {
-
     var arr = [];
     let i;
     var recipes = $(results['results']);
 
     for(i = 0; i < recipes.length; i++) {
         arr.push(`
-            <div class="recipe-card">
-                <img class="card-image" src="${results['results'][i]['thumbnail']}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'"/>
-                <a class="card-title" href="${results['results'][i]['href']}" target="_blank">${results['results'][i]['title']}</a>
+            <div class="recipe-card box-shadow">
+                <a href="${results['results'][i]['href']}" target="_blank">
+                    <img class="card-image" src="${results['results'][i]['thumbnail']}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'"/>
+                </a>
+                <div class="card-title-box text-center">
+                    <h6 class="card-title">${results['results'][i]['title']}</h6>
+                </div>
             </div>
         `);
     }
