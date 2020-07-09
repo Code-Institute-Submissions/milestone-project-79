@@ -22,6 +22,11 @@ function fetchRecipeInformation(event) {
     const apiKey = "c360b33a86msh5b162d84d24e68cp100c0ejsnf72caac1e03f";
     var page = "1";
 
+    if(!ingredients) {
+        $("#recipe").html(`<h2 class="error-text">Looks like your kitchen is empty!</h2>`);
+        return;
+    }
+
     $.when(
         $.getJSON(`${api}?p=${page}&i=${ingredients}&rapidapi-key=${apiKey}`)
     ).then(
