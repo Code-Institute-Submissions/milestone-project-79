@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
+html {
+    font-size: 100%;
+}
+
+
+/*------------------------------------------------Navbar*/
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar {
+    margin: 0 30px;;
+    
+}
+
+.navbar-brand {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 48px;
+}
+
+.navbar-collapse {
+    margin-top: 24px;
+}
+
+.nav-link {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/*------------------------------------------------Hero Image*/
+
+.hero-image {
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.1)), url("/assets/img/food.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    object-fit: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+
+}
+
+/*------------------------------------------------Media Queries*/
+
+@media screen and (max-width: 576px) {
+    .navbar-brand {
+        font-size: 32px;
+    }
+
+    .hero-image {
+        height: 250px;
+    }
+}
