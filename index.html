@@ -13,31 +13,46 @@
    
 </head>
 <body>
-    <header class="container-fluid hero-image header">
-        <nav class="navbar navbar-dark navbar-expand-lg navbar-fixed-top">
-            <a href="index.html" class="navbar-brand mr-4">recipeasy</a>
+    <div class="hero-wrapper">
+        <header class="container-fluid hero-image header">
+            <nav class="navbar navbar-dark navbar-expand-lg navbar-fixed-top">
+                <a href="index.html" class="navbar-brand mr-4">recipeasy</a>
 
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-dropdown" aria-controls="navbar-dropdown" aria-expanded="false" aria-label="Toggle Navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-dropdown" aria-controls="navbar-dropdown" aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbar-dropdown">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a href="index.html" class="nav-link mr-4">Home</a>
-                    </li>
+                <div class="collapse navbar-collapse" id="navbar-dropdown">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="index.html" class="nav-link mr-4">Home</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link mr-4">About</a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link mr-4">About</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link mr-4">Contact</a>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link mr-4">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container search-wrapper">
+            <div class="search-box">
+                <h1 class="search-title text-center">Enter Your Ingredients!</h1>
+
+                <h5 class="search-subtitle text-center">What can I make with what I have left?</h5>
+
+                <div class="search-bar">
+                    <input type="text" id="ingredients" value="onions, garlic">
+                    <button class="search btn" onclick="">Search</button>
+                </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
 
     <div class="container-fluid no-gutter">
     
