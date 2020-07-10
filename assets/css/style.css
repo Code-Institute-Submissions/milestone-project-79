@@ -134,13 +134,15 @@ input:focus, textarea {
 /*------------------------------------------------Recipe Cards*/
 
 .main-section {
-    height: 66vh;
-    align-items: center;
+    min-height: 66vh;
+    position: relative;
+    display: inline-block;
 }
 
 #recipe {
     margin: 60px 0;
     padding: 0 50px;
+    align-items: center;
 }
 
 .recipe-card {
@@ -169,7 +171,8 @@ input:focus, textarea {
 }
 
 .card-title-box {
-    width: 150px;
+    text-align: center;
+    width: 125px;
     height: 30px;
 }
 
@@ -193,7 +196,7 @@ input:focus, textarea {
     color: #ffffff;
 }
 
-#page-top > div.container-fluid.main-section > section > div > div > div:nth-child(3) > button {
+#page-top > div:nth-child(2) > div > div:nth-child(3) > button {
     float: right;
 }
 
@@ -212,6 +215,10 @@ input:focus, textarea {
     text-align: center;
 }
 
+.about-content {
+    padding: 100px;
+}
+
 .about-title {
     font-family: 'Open Sans Condensed', sans-serif;
     color: #ffffff;
@@ -220,7 +227,7 @@ input:focus, textarea {
     letter-spacing: 2px;
 }
 
-.about-content {
+.about-text {
     font-family: 'Open Sans Condensed', sans-serif;
     color: #ffffff;
     text-decoration: none;
@@ -229,12 +236,12 @@ input:focus, textarea {
 }
 
 #about > div > div.col-6.my-auto > p > a {
-    color: #ffffff;
+    color: darkgreen;
     text-decoration: none;
 }
 
 #about > div > div.col-6.my-auto > p > a:hover {
-    color: #333333;
+    color: black;
     text-decoration: none;
 }
 

@@ -29,7 +29,7 @@ function recipeInformationHTML(results) {
                 <a href="${results['results'][i]['href']}" target="_blank">
                     <img class="card-image" src="${results['results'][i]['thumbnail']}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'"/>
                 </a>
-                <div class="card-title-box text-center">
+                <div class="card-title-box">
                     <h6 class="card-title">${results['results'][i]['title']}</h6>
                 </div>
             </div>
