@@ -1,6 +1,13 @@
 var page = 1;
 var page = page.toString();
 var pageLimit = 100;
+var input = document.getElementById("ingredients");
+
+input.addEventListener("keyup", function(event) {
+    if(event.keyCode === 13) {
+        fetchRecipeInformation();
+    }
+});
 
 function prevPage() {
     if(page > 1) {
