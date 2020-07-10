@@ -193,6 +193,23 @@ html {
     letter-spacing: 2px;
 }
 
+/*------------------------------------------------Contact Section*/
+
+.contact-section {
+    height: 50vh;
+    background-color: #929293;
+    text-align: center;
+
+}
+
+.contact-title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 /*------------------------------------------------Media Queries*/
 
 @media screen and (max-width: 576px) {
