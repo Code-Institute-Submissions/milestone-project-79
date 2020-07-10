@@ -165,7 +165,7 @@ html {
 /*------------------------------------------------About Section*/
 
 .about-section {
-    height: 50vh;
+    height: 100vh;
     background: url("/assets/img/about-section.jpeg") no-repeat center center;
     background-size: cover;
     overflow: hidden;
@@ -208,6 +208,13 @@ html {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+/*------------------------------------------------Contact Section*/
+
+.footer {
+    height: 10vh;
+    background-color: #333333;
 }
 
 /*------------------------------------------------Media Queries*/

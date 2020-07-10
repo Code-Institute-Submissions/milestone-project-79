@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
    
 </head>
-<body onload="fetchRecipeInformation()">
+<body onload="fetchRecipeInformation()" id="page-top">
     <div class="hero-wrapper">
         <header class="container-fluid hero-image header">
             <nav class="navbar navbar-dark navbar-expand-lg navbar-fixed-top">
@@ -27,7 +27,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link mr-4">Contact</a>
+                            <a href="#contact" class="nav-link mr-4">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -100,7 +100,15 @@
     </div>
 
     <footer class="container-fluid">
-    
+        <div class="row footer">
+            <div class="col-12 text-center my-auto">
+                <nav class="navbar-dark">
+                    <p class="navbar-nav">
+                        <a href="#page-top" class="nav-link">Back To Top</a>
+                    </p>
+                </nav>
+            </div>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
