@@ -12,6 +12,19 @@ html {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
 }
 
+.btn:hover {
+    color: #ffffff;
+    background-color: #0da10d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input:focus, textarea {
+    outline: none;
+}
+
 /*------------------------------------------------Content*/
 
 
@@ -104,13 +117,18 @@ html {
     border: 1px solid #929293;
     color: #333333;
     margin-right: -3px;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
 .search {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
     background-color: #75b96c;
     margin-top: -3px;
     border-radius: 0 2px 2px 0;
     margin-left: -3px;
+    color: #ffffff;
 }
 
 /*------------------------------------------------Recipe Cards*/
@@ -121,7 +139,6 @@ html {
 }
 
 #recipe {
-    height: 66vh;
     margin: 60px 0;
     padding: 0 50px;
 }
@@ -129,6 +146,18 @@ html {
 .recipe-card {
     display: inline-block;
     margin: 30px 10px 0px;
+    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
 }
 
 .card-image {
@@ -157,9 +186,15 @@ html {
 
 
 .pagination-button {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
     background-color: #75b96c;
     border-radius: 2px;
-    position: absolute;
+    color: #ffffff;
+}
+
+#page-top > div.container-fluid.main-section > section > div > div > div:nth-child(3) > button {
+    float: right;
 }
 
 /*------------------------------------------------About Section*/
@@ -193,6 +228,16 @@ html {
     letter-spacing: 2px;
 }
 
+#about > div > div.col-6.my-auto > p > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#about > div > div.col-6.my-auto > p > a:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
 /*------------------------------------------------Contact Section*/
 
 .contact-section {
@@ -210,7 +255,7 @@ html {
     letter-spacing: 2px;
 }
 
-/*------------------------------------------------Contact Section*/
+/*------------------------------------------------footer*/
 
 .footer {
     height: 10vh;

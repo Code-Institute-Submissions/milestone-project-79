@@ -48,32 +48,26 @@
         </div>
     </div>
 
-    <main class="container-fluid main-section">
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-1 my-auto">
-                        <button class="previous btn box-shadow pagination-button" onclick="prevPage()">Prev</button>
-                    </div>
-
-                    <div class="col-md-10">
-                        <div id="recipe"></div>
-                    </div>
-
-                    <div class="col-md-1 my-auto">
-                        <button class="next btn box-shadow pagination-button" onclick="nextPage()">Next</button>
-                    </div>
-                </div>
+    <div class="container-fluid">
+        <div class="row main-section">
+            <div class="col-1 my-auto">
+                <button class="previous btn box-shadow pagination-button" onclick="prevPage()">Prev</button>
             </div>
-        </section>
-    </main>
+
+            <div class="col-10 my-auto" id="recipe"></div>
+
+            <div class="col-1 my-auto">
+                <button class="next btn box-shadow pagination-button" onclick="nextPage()">Next</button>
+            </div>
+        </div>
+    </div>
 
     <div class="container-fluid" id="about">
         <div class="row about-section">
             <div class="col-6"></div>
             <div class="col-6  my-auto">
                 <h1 class="about-title">About</h1>
-                <p class="about-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis aut cumque soluta dolor rerum repellat harum, obcaecati tempora ratione. Nam, blanditiis quibusdam similique ullam exercitationem illum qui iusto maiores voluptate.</p>
+                <p class="about-content"> <a href="#page-top">home</a> <a href="#contact">contact us</a></p>
             </div>
         </div>
     </div>
@@ -84,7 +78,7 @@
 
             <div class="col-4  my-auto">
                 <h1 class="contact-title">Feel free to get in touch!</h1>
-                <form class="search-bar">
+                <form>
                     <input type="text" name="name" id="fullName" class="form-control box-shadow" placeholder="Name" required>
 
                     <input type="email" name="email" id="emailAddress" class="form-control box-shadow" placeholder="Email" required>
@@ -115,6 +109,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./assets/jquery/jquery-3.5.1.js"></script>
-    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <!--<script type="text/javascript" src="./assets/js/main.js"></script>-->
 </body>
 </html>
