@@ -12,6 +12,10 @@ html {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
 }
 
+/*------------------------------------------------Content*/
+
+
+
 /*------------------------------------------------Navbar*/
 
 .navbar-toggler {
@@ -162,7 +166,7 @@ html {
 
 .about-section {
     height: 50vh;
-    background: url("/assets/img/about.jpeg") no-repeat center center;
+    background: url("/assets/img/about-section.jpeg") no-repeat center center;
     background-size: cover;
     overflow: hidden;
     object-fit: cover;
@@ -170,6 +174,23 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     position: relative;
+    text-align: center;
+}
+
+.about-title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-content {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /*------------------------------------------------Media Queries*/
