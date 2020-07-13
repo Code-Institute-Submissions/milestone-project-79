@@ -1,14 +1,15 @@
-var page = 1;
-var page = page.toString();
-var pageLimit = 100;
-var input = document.getElementById("ingredients");
+let page = 1;
+const pageLimit = 100;
+const input = document.getElementById("ingredients");
 
+// Enter key for search bar to trigger recipe search
 input.addEventListener("keyup", function(event) {
     if(event.keyCode === 13) {
         fetchRecipeInformation();
     }
 });
 
+// Previous button pagination
 function prevPage() {
     if(page > 1) {
         page--;
@@ -17,6 +18,8 @@ function prevPage() {
     return page;
 }
 
+
+// Next button pagination
 function nextPage() {
     if(page >= 1 && page <= pageLimit) {
         page++;
@@ -25,10 +28,11 @@ function nextPage() {
     return page;
 }
 
+// Function call to write search results to index.html in array form
 function recipeInformationHTML(results) {
-    var arr = [];
+    let arr = [];
     let i;
-    var recipes = $(results['results']);
+    let recipes = $(results['results']);
 
     for(i = 0; i < recipes.length; i++) {
         arr.push(`
@@ -45,10 +49,10 @@ function recipeInformationHTML(results) {
     return arr;
 }
 
+// Main search function API call
 function fetchRecipeInformation(event) {
-
     const api = "https://recipe-puppy.p.rapidapi.com/";
-    var ingredients = $("#ingredients").val();
+    let ingredients = $("#ingredients").val();
     const apiKey = "c360b33a86msh5b162d84d24e68cp100c0ejsnf72caac1e03f";
 
     if(!ingredients) {
