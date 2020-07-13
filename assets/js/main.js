@@ -15,6 +15,7 @@ function prevPage() {
         page--;
         fetchRecipeInformation();
     }
+
     return page;
 }
 
@@ -25,6 +26,7 @@ function nextPage() {
         page++;
         fetchRecipeInformation();
     }
+
     return page;
 }
 
@@ -46,6 +48,7 @@ function recipeInformationHTML(results) {
             </div>
         `);
     }
+
     return arr;
 }
 
@@ -57,6 +60,7 @@ function fetchRecipeInformation(event) {
 
     if(!ingredients) {
         $("#recipe").html(`<h2 class="error-text">Looks like your kitchen is empty!</h2>`);
+        
         return;
     }
 
