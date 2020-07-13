@@ -10,25 +10,25 @@ what can I make with what I have left?
 The premise is simple - enter the ingredients you have left into the search bar, and the site will return to you a list of recipes that you can make with what you have.
 Even if you don't have everything, it's a step in the right direction.
 
+I will utilise JavaScript and jQuery to provide the interactiivity of the site and to communicate with a recipe database API which should return all of the information
+required for any potential users.
+
 ***
 
 ## UX
 
+The demographic of the website is potentilly quite a broad specturm of people, as everybody will at some point need to cook a meal and may face the tough decision of what they
+actually want to cook. For this reason, the site will need to be as straighforward as possible to use, with clear directions and interactivity on how to use it. If a user is potentially
+not as tech savvy, then an "About" section will be included in order to explain the premise of the site, as well as a "Contact" section where any potential users may wish to provide feedback
+on the functionality of the site.
 
+Because of this, I have identified one main user of the site:
 
 ### User Stories
 
-#### 
+#### Casual User
 
-
-
-#### 
-
-
-
-#### 
-
-
+As a casual user, I would like to be able to navigate each page easily, so that I can enjoy the content without worrying about getting lost.
 
 High-resolution wireframes can be found [here](./assets/mockups/recipeasy-mockup.pdf).
 
@@ -37,6 +37,8 @@ High-resolution wireframes can be found [here](./assets/mockups/recipeasy-mockup
 ## Features
 
 ### Existing Features
+
+* Obiously positioned navigation bar with links to all page sections
 
 * 
 
@@ -98,6 +100,10 @@ My site has been deployed on GitHub pages. The site can be found [here]().
 ***
 
 ## Credits
+
+### Contents:
+
+* 
 
 ### Media:
 
