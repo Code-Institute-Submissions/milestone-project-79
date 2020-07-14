@@ -49,7 +49,7 @@ function recipeInformationHTML(results) {
 
     // If there are no recipes matching the search criteria, return an error message
     if(recipes.length === 0) {
-        $("#recipe").html(`<h2 class="error-text">We can't find what you're looking for!</h2>`);
+        $("#recipe").html(`<h2 class="search-title">We can't find what you're looking for!</h2>`);
 
         return;
     }
@@ -78,7 +78,7 @@ function fetchRecipeInformation() {
 
     // Return error message if search field is empty 
     if(!ingredients) {
-        $("#recipe").html(`<h2 class="error-text">Looks like your kitchen is empty!</h2>`);
+        $("#recipe").html(`<h2 class="search-title">Looks like your kitchen is empty!</h2>`);
         
         return;
     }
@@ -94,14 +94,14 @@ function fetchRecipeInformation() {
             $("#recipe").html(recipeInformationHTML(ingredientsData));
         }, function(errorResponse) {
             if(errorResponse.status === 404) {
-                $("#recipe").html(`<h2 class="error-text">No recipe found</h2>`);
+                $("#recipe").html(`<h2 class="search-title">No recipe found</h2>`);
             } else if(errorResponse.status === 500) {
-                $("#recipe").html(`<h2 class="error-text">Server error</h2>`);
+                $("#recipe").html(`<h2 class="search-title">Server error</h2>`);
             } else if(errorResponse === 403) {
                 var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset')*1000);
-                $("#recipe").html(`<h4 class="error-text>Too many requests, please wait until ${resetTime.toLocaleDateString()}</h4>`);
+                $("#recipe").html(`<h4 class="search-title>Too many requests, please wait until ${resetTime.toLocaleDateString()}</h4>`);
             } else {
-                $("#recipe").html(`<h2 class="error-text>Error: ${errorResponse.responseJSON.message}</h2>`);
+                $("#recipe").html(`<h2 class="search-title">Error: ${errorResponse.responseJSON.message}</h2>`);
             }
         }
     );
