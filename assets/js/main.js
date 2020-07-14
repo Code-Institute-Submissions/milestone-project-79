@@ -36,6 +36,13 @@ function recipeInformationHTML(results) {
     let i;
     let recipes = $(results['results']);
 
+    // If there are no recipes matching the search criteria, return an error message
+    if(recipes.length === 0) {
+        $("#recipe").html(`<h2 class="error-text">We can't find what you're looking for!</h2>`);
+
+        return;
+    }
+
     for(i = 0; i < recipes.length; i++) {
         arr.push(`
             <div class="recipe-card box-shadow">
@@ -53,17 +60,19 @@ function recipeInformationHTML(results) {
 }
 
 // Main search function API call
-function fetchRecipeInformation(event) {
+function fetchRecipeInformation() {
     const api = "https://recipe-puppy.p.rapidapi.com/";
     let ingredients = $("#ingredients").val();
     const apiKey = "c360b33a86msh5b162d84d24e68cp100c0ejsnf72caac1e03f";
 
+    // Return error message if search field is empty 
     if(!ingredients) {
         $("#recipe").html(`<h2 class="error-text">Looks like your kitchen is empty!</h2>`);
         
         return;
     }
 
+    // Display loading gif while information is being requested
     $("#recipe").html(`<img src="./assets/img/loading.gif" alt="loading..." width="24" height="24"/>`)
 
     $.when(
