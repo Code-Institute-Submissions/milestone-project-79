@@ -191,7 +191,6 @@ input:focus, textarea {
     padding: 0 10px;
 }
 
-
 .pagination-button {
     font-family: 'Open Sans Condensed', sans-serif;
     text-transform: uppercase;
@@ -202,6 +201,10 @@ input:focus, textarea {
 
 #page-top > div:nth-child(2) > div > div:nth-child(3) > button {
     float: right;
+}
+
+.hidden {
+    display: none;
 }
 
 /*------------------------------------------------About Section*/

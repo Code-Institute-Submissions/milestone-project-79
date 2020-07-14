@@ -36,6 +36,18 @@ function recipeInformationHTML(results) {
     let i;
     let recipes = $(results['results']);
 
+    if(page <= 1) {
+        $("#previous").addClass("hidden");
+    } else {
+        $("#previous").removeClass("hidden");
+    }
+
+    if(recipes.length < 10) {
+        $("#next").addClass("hidden");
+    } else {
+        $("#next").removeClass("hidden");
+    }
+
     // If there are no recipes matching the search criteria, return an error message
     if(recipes.length === 0) {
         $("#recipe").html(`<h2 class="error-text">We can't find what you're looking for!</h2>`);
