@@ -144,6 +144,7 @@ input:focus, textarea {
 }
 
 #recipe {
+    height: 50vh;
     margin: 60px 0;
     padding: 0 50px;
     align-items: center;
@@ -191,6 +192,7 @@ input:focus, textarea {
     padding: 0 10px;
 }
 
+
 .pagination-button {
     font-family: 'Open Sans Condensed', sans-serif;
     text-transform: uppercase;
@@ -201,10 +203,6 @@ input:focus, textarea {
 
 #page-top > div:nth-child(2) > div > div:nth-child(3) > button {
     float: right;
-}
-
-.hidden {
-    display: none;
 }
 
 /*------------------------------------------------About Section*/

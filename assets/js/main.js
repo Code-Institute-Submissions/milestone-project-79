@@ -37,15 +37,15 @@ function recipeInformationHTML(results) {
     let recipes = $(results['results']);
 
     if(page <= 1) {
-        $("#previous").addClass("hidden");
+        $("#previous").addClass("d-none");
     } else {
-        $("#previous").removeClass("hidden");
+        $("#previous").removeClass("d-none");
     }
 
     if(recipes.length < 10) {
-        $("#next").addClass("hidden");
+        $("#next").addClass("d-none");
     } else {
-        $("#next").removeClass("hidden");
+        $("#next").removeClass("d-none");
     }
 
     // If there are no recipes matching the search criteria, return an error message
@@ -85,7 +85,7 @@ function fetchRecipeInformation() {
     }
 
     // Display loading gif while information is being requested
-    $("#recipe").html(`<img src="./assets/img/loading.gif" alt="loading..." width="24" height="24"/>`)
+    $("#recipe").html(`<img src="./assets/img/loading.gif" alt="loading..." width="24" height="24"/>`);
 
     $.when(
         $.getJSON(`${api}?p=${page}&i=${ingredients}&rapidapi-key=${apiKey}`)
