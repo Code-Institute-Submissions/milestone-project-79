@@ -1,5 +1,4 @@
 let page = 1;
-const pageLimit = 100;
 const input = document.getElementById("ingredients");
 
 // Enter key for search bar to trigger recipe search
@@ -22,7 +21,7 @@ function prevPage() {
 
 // Next button pagination
 function nextPage() {
-    if(page >= 1 && page <= pageLimit) {
+    if(page >= 1) {
         page++;
         fetchRecipeInformation();
     }

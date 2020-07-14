@@ -201,7 +201,7 @@ input:focus, textarea {
     color: #ffffff;
 }
 
-#page-top > div:nth-child(2) > div > div:nth-child(3) > button {
+#previous {
     float: right;
 }
 
