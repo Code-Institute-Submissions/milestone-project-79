@@ -29,6 +29,12 @@ function nextPage() {
     return page;
 }
 
+// Remove buttons from display if there is an error message
+function removeButtons() {
+    $("#previous").addClass("d-none");
+    $("#next").addClass("d-none");
+}
+
 // Function call to write search results to index.html in array form
 function recipeInformationHTML(results) {
     let arr = [];
@@ -36,27 +42,28 @@ function recipeInformationHTML(results) {
     let recipes = $(results['results']);
 
     if(page <= 1) {
-        $("#previous").addClass("d-none");
+        $("#previous").addClass("disable");
     } else {
-        $("#previous").removeClass("d-none");
+        $("#previous").removeClass("disable");
     }
 
     if(recipes.length < 10) {
-        $("#next").addClass("d-none");
+        $("#next").addClass("disable");
     } else {
-        $("#next").removeClass("d-none");
+        $("#next").removeClass("disable");
     }
 
     // If there are no recipes matching the search criteria, return an error message
     if(recipes.length === 0) {
         $("#recipe").html(`<h2 class="search-title">We can't find what you're looking for!</h2>`);
+        removeButtons();
 
         return;
     }
 
     for(i = 0; i < recipes.length; i++) {
         arr.push(`
-            <div class="recipe-card box-shadow">
+            <div class="recipe-card box-shadow d-block ">
                 <a href="${results['results'][i]['href']}" target="_blank">
                     <img class="card-image" src="${results['results'][i]['thumbnail']}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'"/>
                 </a>
@@ -78,13 +85,11 @@ function fetchRecipeInformation() {
 
     // Return error message if search field is empty 
     if(!ingredients) {
-        $("#recipe").html(`<h2 class="search-title">Looks like your kitchen is empty!</h2>`);
+        $("#recipe").html(`<h2 class="search-title">Please enter your ingredients above!</h2>`);
+        removeButtons();
         
         return;
     }
-
-    // Display loading gif while information is being requested
-    $("#recipe").html(`<img src="./assets/img/loading.gif" alt="loading..." width="24" height="24"/>`);
 
     $.when(
         $.getJSON(`${api}?p=${page}&i=${ingredients}&rapidapi-key=${apiKey}`)
@@ -95,13 +100,17 @@ function fetchRecipeInformation() {
         }, function(errorResponse) {
             if(errorResponse.status === 404) {
                 $("#recipe").html(`<h2 class="search-title">No recipe found</h2>`);
+                removeButtons();
             } else if(errorResponse.status === 500) {
-                $("#recipe").html(`<h2 class="search-title">Server error</h2>`);
+                $("#recipe").html(`<h2 class="search-title">Status: 500 - Internal Server error</h2>`);
+                removeButtons();
             } else if(errorResponse === 403) {
                 var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset')*1000);
                 $("#recipe").html(`<h4 class="search-title>Too many requests, please wait until ${resetTime.toLocaleDateString()}</h4>`);
+                removeButtons();
             } else {
                 $("#recipe").html(`<h2 class="search-title">Error: ${errorResponse.responseJSON.message}</h2>`);
+                removeButtons();
             }
         }
     );

@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
-   
 </head>
+
 <body onload="fetchRecipeInformation()" id="page-top">
-    <div class="hero-wrapper">
         <header class="container-fluid hero-image header">
             <nav class="navbar navbar-dark navbar-expand-lg navbar-fixed-top">
                 <a href="index.html" class="navbar-brand mr-4">recipeasy</a>
@@ -35,41 +34,50 @@
         </header>
 
         <div class="container-fluid search-wrapper">
-            <div class="search-box box-shadow">
-                <h1 class="search-title text-center">Enter Your Ingredients!</h1>
+            <div class="row justify-content-center">
+                <div class="col-12 search-box box-shadow">
+                    <h1 class="search-title text-center">Enter your ingredients below!</h1>
 
-                <h5 class="search-subtitle text-center">What can I make with what I have left?</h5>
+                    <h5 class="search-subtitle text-center">What can I make with what I have left?</h5>
 
-                <div class="search-bar">
-                    <input class="box-shadow" type="text" id="ingredients" value="chicken">
-                    <button class="search btn box-shadow" onclick="fetchRecipeInformation()">Search</button>
+                    <div class="search-bar">
+                        <input class="box-shadow" type="text" id="ingredients" value="chicken">
+                        <button class="search btn box-shadow" onclick="fetchRecipeInformation()">Search</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container-fluid main-section">
+    <section class="container-fluid main-section">
         <div class="row">
-            <div class="col-1 my-auto">
-                <button class="previous btn box-shadow pagination-button" id="previous" onclick="prevPage()">Prev</button>
-            </div>
+            <div class="col-1"></div>
 
             <div class="col-10 my-auto">
                 <div class="container-fluid">
                     <div class="row justify-content-center no-gutters" id="recipe"></div>
                 </div>
             </div>
+            
+            <div class="col-1"></div>
+        </div>
+    </section>
 
-            <div class="col-1 my-auto">
-                <button class="next btn box-shadow pagination-button" id="next" onclick="nextPage()">Next</button>
+    <section class="container-fluid pagination-container">
+        <div class="row">
+            <div class="col-6 my-auto">
+                <div class="previous btn box-shadow pagination-button" id="previous" onclick="prevPage(); location.href='#page-top';">Prev</div>
+            </div>
+
+            <div class="col-6 my-auto">
+                <button class="next btn box-shadow pagination-button" id="next" onclick="nextPage(); location.href='#page-top';">Next</button>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container-fluid" id="about">
+    <section class="container-fluid" id="about">
         <div class="row about-section">
-            <div class="col-md-6"></div>
-            <div class="col-lg-6 my-auto about-content">
+            <div class="col-6 d-none d-xl-block"></div>
+            <div class="col-xl-6 col-lg-12 my-auto about-content">
                 <h1 class="about-title">About</h1>
                 <p class="about-text">
                     Do you ever arrive at your kitchen and find that you have a collection of leftover ingredients and you have no idea what to make with them?
@@ -80,13 +88,13 @@
                 </p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container-fluid" id="contact">
+    <section class="container-fluid" id="contact">
         <div class="row contact-section">
-            <div class="col-4"></div>
+            <div class="col-2"></div>
 
-            <div class="col-4  my-auto">
+            <div class="col-8 my-auto">
                 <h1 class="contact-title">Feel free to get in touch!</h1>
                 <form>
                     <input type="text" name="name" id="fullName" class="form-control box-shadow" placeholder="Name" required>
@@ -99,9 +107,9 @@
                 </form>
             </div>
 
-            <div class="col-4"></div>
+            <div class="col-2"></div>
         </div>
-    </div>
+    </section>
 
     <footer class="container-fluid">
         <div class="row footer">
