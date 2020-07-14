@@ -31,10 +31,6 @@ input:focus, textarea {
     border: 0;
 }
 
-.navbar {
-    margin: 0 30px;
-}
-
 .navbar-brand {
     font-family: 'Fredericka the Great', cursive;
     font-size: 48px;
@@ -59,6 +55,7 @@ input:focus, textarea {
 
 .hero-image {
     height: 30vh;
+    max-width: 100%;
     background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.1)), url("/assets/img/food.jpeg") no-repeat top center;
     background-size: contain;
     object-fit: cover;
@@ -79,7 +76,8 @@ input:focus, textarea {
 }
 
 .search-box {
-    width: 700px;
+    width: 575px;
+    max-width: 100%;
     border-radius: 5px;
     background-color: #ffffff;
     padding: 20px;
@@ -138,7 +136,8 @@ input:focus, textarea {
 }
 
 .recipe-card {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     margin: 0px 10px 10px;
     transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
@@ -155,8 +154,7 @@ input:focus, textarea {
 }
 
 .card-image {
-    width: 250px;
-    height: 150px;
+    max-width: 100%;
     background: no-repeat center center fixed;
     overflow: hidden;
     object-fit: cover;
@@ -302,7 +300,7 @@ input:focus, textarea {
     }
 
     .search-box {
-        width: 350px;
+        width: 200px;
     }
 
     #ingredients {
