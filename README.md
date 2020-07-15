@@ -92,6 +92,7 @@ pic resize picresize.com
 color test https://color.a11y.com/
 
 html validator
+css validator
 
 ### Testing Scenarios
 

@@ -3,7 +3,9 @@ const input = document.getElementById("ingredients");
 
 //-----------------------------------------------------Input Logic
 
-// Enter key for search bar to trigger recipe search
+/* Enter key for search bar to trigger recipe search as most users
+    will be used to pressing enter to trigger search as well as using 
+    the search button */
 input.addEventListener("keyup", function(event) {
     if(event.keyCode === 13) {
         fetchRecipeInformation();
@@ -30,7 +32,8 @@ function nextPage() {
     return page;
 }
 
-// Remove buttons from display if there is an error message
+/* Remove buttons from display if there is an error message to provide
+    an indicator of which API page the user is currently on */
 function removeButtons() {
     $("#previous").addClass("d-none");
     $("#next").addClass("d-none");
@@ -38,7 +41,7 @@ function removeButtons() {
 
 //-----------------------------------------------------Presentation Logic
 
-// Function call to write search results to index.html in array form
+// Function call to write search results to index.html in array form.
 function recipeInformationHTML(results) {
     let arr = [];
     let i;
@@ -96,6 +99,7 @@ function fetchRecipeInformation() {
         return;
     }
 
+    // Promise to Recipe Puppy API using search criteria variables and callback for the recipeInformationHTML function
     $.when(
         $.getJSON(`${api}?p=${page}&i=${ingredients}&rapidapi-key=${apiKey}`)
     ).then(
