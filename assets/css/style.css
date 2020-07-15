@@ -208,7 +208,6 @@ input:focus, textarea {
 .about-section {
     height: 75vh;
     background: url("/assets/img/about-section.jpeg") no-repeat center right;
-    background-size: cover;
     overflow: hidden;
     object-fit: cover;
     -webkit-background-size: cover;

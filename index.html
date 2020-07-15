@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
         (function(){
             emailjs.init("user_gb9LBDkH9HNYQbNVBi6py");
         })();
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <section class="container-fluid main-section">
+    <div class="container-fluid main-section">
         <div class="row">
             <div class="col-1"></div>
 
@@ -68,9 +68,9 @@
             
             <div class="col-1"></div>
         </div>
-    </section>
+    </div>
 
-    <section class="container-fluid pagination-container">
+    <div class="container-fluid pagination-container">
         <div class="row">
             <div class="col-6 my-auto">
                 <div class="previous btn box-shadow pagination-button" id="previous" onclick="prevPage(); location.href='#page-top';">Prev</div>
@@ -80,13 +80,13 @@
                 <button class="next btn box-shadow pagination-button" id="next" onclick="nextPage(); location.href='#page-top';">Next</button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="container-fluid" id="about">
+    <div class="container-fluid" id="about">
         <div class="row about-section">
             <div class="col-6 d-none d-xl-block"></div>
-            <div class="col-xl-6 col-xs-12 my-auto about-content">
-                <h1 class="about-title">About</h1>
+            <section class="col-xl-6 col-xs-12 my-auto about-content">
+                <h2 class="about-title">About</h2>
                 <p class="about-text mr-4">
                     Do you ever arrive at your kitchen and find that you have a collection of leftover ingredients and you have no idea what to make with them?
                     Or do you have an ingredient in mind that you want to include in a recipe?<br><br>
@@ -96,16 +96,16 @@
                 </p>
 
                 <span class="small about-text">(Just remember to comma seperate your list!)</span>
-            </div>
+            </section>
         </div>
-    </section>
+    </div>
 
-    <section class="container-fluid" id="contact">
+    <div class="container-fluid" id="contact">
         <div class="row contact-section">
             <div class="col-1 col-sm-4"></div>
 
-            <div class="col-10 col-sm-4 my-auto">
-                <h1 class="contact-title">Feel free to get in touch!</h1>
+            <section class="col-10 col-sm-4 my-auto">
+                <h2 class="contact-title">Feel free to get in touch!</h2>
                 <form onsubmit="return sendMail(this);">
                     <input type="text" name="name" id="fullName" class="form-control box-shadow" placeholder="Name" required>
 
@@ -115,11 +115,11 @@
                     
                     <input type="submit" value="Submit" class="search submit btn box-shadow">
                 </form>
-            </div>
+            </section>
 
             <div class="col-1 col-sm-4"></div>
         </div>
-    </section>
+    </div>
 
     <footer class="container-fluid">
         <div class="row footer">
@@ -133,9 +133,9 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="./assets/js/jquery-3.5.1.js"></script>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./assets/js/main.js"></script>
-    <script type="text/javascript" src="./assets/js/sendEmail.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/sendEmail.js"></script>
 </body>
 </html>

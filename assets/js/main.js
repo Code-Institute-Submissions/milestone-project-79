@@ -68,7 +68,7 @@ function recipeInformationHTML(results) {
         arr.push(`
             <div class="recipe-card box-shadow d-block ">
                 <a href="${results.results[i].href}" target="_blank">
-                    <img class="card-image" src="${results.results[i].thumbnail}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'" width="250" height="150"/>
+                    <img class="card-image" src="${results.results[i].thumbnail}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'" alt="recipe" width="250" height="150"/>
                 </a>
                 <div class="card-title-box">
                     <h6 class="card-title">${results.results[i].title}</h6>
