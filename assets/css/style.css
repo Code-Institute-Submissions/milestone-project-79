@@ -238,12 +238,14 @@ input:focus, textarea {
     letter-spacing: 2px;
 }
 
-#about > div > div.col-lg-6.my-auto.about-content > p > a {
+#about-link-1,
+#about-link-2 {
     color: darkgreen;
     text-decoration: none;
 }
 
-#about > div > div.col-lg-6.my-auto.about-content > p > a:hover {
+#about-link-1:hover,
+#about-link-2:hover {
     color: black;
     text-decoration: none;
 }
@@ -282,6 +284,12 @@ input:focus, textarea {
 
 /*------------------------------------------------Media Queries*/
 
+@media screen and (max-width: 319px) {
+    .about-text {
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-width: 576px) {
     html {
         font-size: 10px;
@@ -303,7 +311,19 @@ input:focus, textarea {
         width: 200px;
     }
 
+    .search-title {
+        font-size: 12px;
+    }
+
+    .search-subtitle {
+        font-size: 8px;
+    }
+
     #ingredients {
         height: 24px;
+    }
+
+    .about-content {
+        padding: 20px;
     }
 }
