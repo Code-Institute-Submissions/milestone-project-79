@@ -74,6 +74,8 @@ High-resolution wireframes can be found [here](./assets/mockups/recipeasy-mockup
 
 * [Loading](https://loading.io/) - Used to create loading .gif.
 
+* [emailjs](https://www.emailjs.com/) - Used as an email service for the contact form.
+
 * [Markup Validation](https://validator.w3.org/) - Used to validate HTML code.
 
 * [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code.
