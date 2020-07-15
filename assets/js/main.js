@@ -1,6 +1,8 @@
 let page = 1;
 const input = document.getElementById("ingredients");
 
+//-----------------------------------------------------Input Logic
+
 // Enter key for search bar to trigger recipe search
 input.addEventListener("keyup", function(event) {
     if(event.keyCode === 13) {
@@ -18,7 +20,6 @@ function prevPage() {
     return page;
 }
 
-
 // Next button pagination
 function nextPage() {
     if(page >= 1) {
@@ -34,6 +35,8 @@ function removeButtons() {
     $("#previous").addClass("d-none");
     $("#next").addClass("d-none");
 }
+
+//-----------------------------------------------------Presentation Logic
 
 // Function call to write search results to index.html in array form
 function recipeInformationHTML(results) {
@@ -76,6 +79,8 @@ function recipeInformationHTML(results) {
 
     return arr;
 }
+
+//-----------------------------------------------------Processing Logic
 
 // Main search function API call
 function fetchRecipeInformation() {

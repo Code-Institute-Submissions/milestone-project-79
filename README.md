@@ -86,7 +86,10 @@ High-resolution wireframes can be found [here](./assets/mockups/recipeasy-mockup
 
 ## Testing
 
-
+Used jshint to test js
+Am I responsive?
+pic resize picresize.com
+color test https://color.a11y.com/
 
 ### Testing Scenarios
 

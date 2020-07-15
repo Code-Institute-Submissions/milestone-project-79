@@ -33,7 +33,7 @@ input:focus, textarea {
 
 .navbar-brand {
     font-family: 'Fredericka the Great', cursive;
-    font-size: 48px;
+    font-size: 3em;
 }
 
 .navbar-collapse {
@@ -109,7 +109,7 @@ input:focus, textarea {
     width: 75%;
     border-radius: 2px 0 0 2px;
     border: 1px solid #929293;
-    color: #333333;
+    color: #929293; 
     margin-right: -3px;
     box-sizing: border-box;
     resize: vertical;
@@ -219,7 +219,7 @@ input:focus, textarea {
 }
 
 .about-content {
-    padding: 10px 100px;
+    padding: 20px;
 }
 
 .about-title {
@@ -284,28 +284,20 @@ input:focus, textarea {
 
 /*------------------------------------------------Media Queries*/
 
-@media screen and (max-width: 319px) {
-    .about-text {
-        font-size: 12px;
-    }
-}
-
+/* I tried to avoid using a media query for smaller devices,
+    however, because of the positioning of the search box,
+    using media queries to deal with the content sizing proved
+    to be the only way to make the site responsive on devices
+    with a max width of 576px. */
+    
 @media screen and (max-width: 576px) {
     html {
         font-size: 10px;
     }
 
-    .navbar-brand {
-        font-size: 32px;
-    }
-
     .hero-image {
-        height: 250px;
-    }
-
-    .search-wrapper {
-        margin-top: -110px;
-    }
+        height: 200px;
+    }  
 
     .search-box {
         width: 200px;
@@ -321,9 +313,5 @@ input:focus, textarea {
 
     #ingredients {
         height: 24px;
-    }
-
-    .about-content {
-        padding: 20px;
     }
 }
