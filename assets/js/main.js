@@ -39,7 +39,7 @@ function removeButtons() {
 function recipeInformationHTML(results) {
     let arr = [];
     let i;
-    let recipes = $(results['results']);
+    let recipes = $(results.results);
 
     if(page <= 1) {
         $("#previous").addClass("disable");
@@ -64,11 +64,11 @@ function recipeInformationHTML(results) {
     for(i = 0; i < recipes.length; i++) {
         arr.push(`
             <div class="recipe-card box-shadow d-block ">
-                <a href="${results['results'][i]['href']}" target="_blank">
-                    <img class="card-image" src="${results['results'][i]['thumbnail']}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'" width="250" height="150"/>
+                <a href="${results.results[i].href}" target="_blank">
+                    <img class="card-image" src="${results.results[i].thumbnail}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'" width="250" height="150"/>
                 </a>
                 <div class="card-title-box">
-                    <h6 class="card-title">${results['results'][i]['title']}</h6>
+                    <h6 class="card-title">${results.results[i].title}</h6>
                 </div>
             </div>
         `);
