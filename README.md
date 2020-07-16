@@ -54,8 +54,6 @@ High-resolution wireframes can be found [here](https://github.com/vdgvzr/milesto
 
 * An "auto-suggest" feauture for the search bar which suggests ingredients to the user based on the the actual ingredients data contained within the API.
 
-* Message to the user indicating that form has been submitted.
-
 ***
 
 ## Technologies Used
