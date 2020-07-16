@@ -1,4 +1,4 @@
-![alt text](/assets/img/recipeasy-responsive.png)
+![Recipeasy responsiveness screenshot](/assets/img/recipeasy-responsive.png)
 
 # Milestone Project 2 - Interactive Frontend Development
 
@@ -28,9 +28,9 @@ Because of this, I have identified one main user of the site:
 
 #### Casual User
 
-As a casual user, I would like to be able to navigate each page easily, so that I can enjoy the content without worrying about getting lost.
+As a casual user, I would like to be able to navigate each page easily, so that I can enjoy the content and get straight to the point without worrying about getting lost.
 
-High-resolution wireframes can be found [here](./assets/mockups/recipeasy-mockup.pdf).
+High-resolution wireframes can be found [here](https://github.com/vdgvzr/milestone-project---2/blob/master/assets/mockups/recipeasy-mockup.pdf).
 
 ***
 
@@ -105,7 +105,9 @@ Both main.js and sendEmail.js were tested using [jshint](https://jshint.com/). T
 jQuery selector within the template literals used to target the API data (${results['results'][i]}) would be better written as dot notation - 
 (${results.results[i]}).
 
-While running the website, the console log returned [warnings](https://github.com/vdgvzr/milestone-project--2/blob/master/assets/img/console-warnings.png?raw=true) specific to the security of the links of the recipes returned from the API
+While running the website, the console log returned [warnings](https://github.com/vdgvzr/milestone-project---2/blob/master/assets/img/console-warnings.png) 
+specific to the security of the links of the recipes returned from the API. However it is my understanding that this data is something that can altered only
+on the API end.
 
 Used jshint to test js
 Am I responsive?
@@ -114,6 +116,47 @@ color test https://color.a11y.com/
 
 html validator
 css validator
+
+### Peer Testing
+
+To test the UX and interactivity of the site, I asked a friend to use the site and provide feedback:
+
+1. Does the site provide a good solution to your expectations?
+
+    *  "Yes."
+
+2. Do you think there is a better way to have designed the site?
+
+    * "Plurals - when I search for cucumbers, recipes with cucumber didnt come up, unless I searched for cucumber.
+    When I searched for potatoes, nothing came up but when I searched for potato they did. It would be nice if 
+    similar words came up in this case, because when searching for multiple ingredients, it can take quite a few tries to get it right."
+
+3. Are the resources on the site easy to find?
+
+    * "Yes, unless I missed useful info not knowing about it."
+
+4. Is the site's navigation consistent?
+
+    * "Yes."
+
+5. Do all of the recipe links work?
+
+    * "The ones I tried, yes."
+
+6. Is the site straightforward and easy to use without having to look at any documentation or instructions?
+
+    * "Yes, very straightforward."
+
+7. Is the site intuitive, or is it confusing to use?
+
+    * "Intuitive."
+
+8. Do you feel like you are in complete control of the interactiivity of the site?
+
+    * "Yes."
+
+The peer test resulted in two major changes that could be made to the site. Firstly, it revealed a bug in which if the defensive programming
+protocol of "no recipe found" was returned, then the pagination buttons would disappear for any search performed after that.
 
 ### Testing Scenarios
 

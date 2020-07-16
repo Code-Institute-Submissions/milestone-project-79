@@ -39,6 +39,13 @@ function removeButtons() {
     $("#next").addClass("d-none");
 }
 
+/* Add the pagination buttons back onto the page if previous search
+    resulted in an error message */
+function addButtons() {
+    $("#previous").removeClass("d-none");
+    $("#next").removeClass("d-none");
+}
+
 //-----------------------------------------------------Presentation Logic
 
 // Function call to write search results to index.html in array form.
@@ -79,6 +86,8 @@ function recipeInformationHTML(results) {
             </div>
         `);
     }
+
+    addButtons();
 
     return arr;
 }
