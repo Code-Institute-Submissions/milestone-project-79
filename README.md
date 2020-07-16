@@ -207,7 +207,7 @@ functionality and design would be improved significantly. This is a trade-off th
 
 ## Deployment
 
-My site has been deployed on GitHub pages. The site can be found [here]().
+My site has been deployed on GitHub pages. The site can be found [here](https://vdgvzr.github.io/milestone-project---2/).
 
 ***
 
