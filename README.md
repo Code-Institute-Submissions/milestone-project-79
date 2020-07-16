@@ -72,9 +72,9 @@ High-resolution wireframes can be found [here](https://github.com/vdgvzr/milesto
 
 * [Bootstrap](https://getbootstrap.com/) - CDN framework used for layout structure and elements.
 
-* [Font Awesome](https://fontawesome.com/) - Used for icon library for social links.
+* [Font Awesome](https://fontawesome.com/) - Used for icons.
 
-* [Google Fonts](https://fonts.google.com/) - Raleway and Roboto have been used throughout this project.
+* [Google Fonts](https://fonts.google.com/) - Fredericka The Great and Open Sans Condensed have been used throughout this project.
 
 * [Adobe Stock](https://www.stock.adobe.com/) - Used public domain images for site background and stock images.
 
