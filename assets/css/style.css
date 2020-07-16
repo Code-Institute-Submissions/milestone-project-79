@@ -236,14 +236,12 @@ input:focus, textarea {
     letter-spacing: 2px;
 }
 
-#about-link-1,
-#about-link-2 {
+.about-link {
     color: darkgreen;
     text-decoration: none;
 }
 
-#about-link-1:hover,
-#about-link-2:hover {
+.about-link:hover {
     color: black;
     text-decoration: none;
 }
