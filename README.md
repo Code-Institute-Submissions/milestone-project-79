@@ -38,9 +38,17 @@ High-resolution wireframes can be found [here](https://github.com/vdgvzr/milesto
 
 ### Existing Features
 
-* Obiously positioned navigation bar with links to all page sections
+* Obiously positioned navigation bar with links to all page sections.
 
-* 
+* Search bar allows users to find recipes based on an ingredients list that has been input.
+
+* Recipe cards laid out in an 'easy-to-choose' format with pagination buttons to access all recipes/data.
+
+* "About" section containing information on how to use the site effectively, should the user require it for any reason.
+
+* Contact form.
+
+* Responsive down to a 320px width.
 
 ### Features Left to Implement
 
@@ -62,7 +70,7 @@ High-resolution wireframes can be found [here](https://github.com/vdgvzr/milesto
 
 * [jQuery](https://jquery.com/) - JavaScript library used to build site logic.
 
-* [Jasmine](https://jasmine.github.io/) - Used for testing JavaScript and bug fixes.
+* [Jasmine](https://jasmine.github.io/) - Used for testing JavaScript and bug fixes. (Removed).
 
 * [Bootstrap](https://getbootstrap.com/) - CDN framework used for layout structure and elements.
 
@@ -75,12 +83,6 @@ High-resolution wireframes can be found [here](https://github.com/vdgvzr/milesto
 * [Recipe Puppy](https://rapidapi.com/brianiswu/api/recipe-puppy) - API of recipe data used for the site.
 
 * [Loading](https://loading.io/) - Used to create loading .gif.
-
-* [emailjs](https://www.emailjs.com/) - Used as an email service for the contact form.
-
-* [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code.
-
-* [Am I Responsive?](http://ami.responsivedesign.is/) - Used to quickly see how the responsive design looked across all media.
 
 ***
 
@@ -186,27 +188,27 @@ build the interactivity of the site.
 ### Testing Scenarios
 
 1. Search Bar
-    * Click on search bar
-    * Submit empty search bar to return error message - "Please enter your ingredients above!"
-    * Enter an ingredient that doesn not exist to return error message - "We can't find what you're looking for!"
-    * Enter ingredient or ingredients list and press either the enter key or click on the search button to return recipes
+    * Click on search bar.
+    * Submit empty search bar to return error message - "Please enter your ingredients above!".
+    * Enter an ingredient that doesn not exist to return error message - "We can't find what you're looking for!".
+    * Enter ingredient or ingredients list and press either the enter key or click on the search button to return recipes.
 
 2. Pagination buttons
-    * Search for recipe
-    * Click on disbaled Prev button - no action
+    * Search for recipe.
+    * Click on disbaled Prev button - no action.
     * Click on enabled Next button - moves to page 2, page 3 etc.
     * Search for a recipe list with fewer results - click to page where there is less than 10 results (indicating the last of the data), click on Next button - no action.
 
 3. Page links
-    * Click on a page link to go to specific page section by IDE
-    * Page scrolls to appropriate section
+    * Click on a page link to go to specific page section by id.
+    * Page scrolls to appropriate section.
 
 4. Contact form
-    * Go to "Contact" section
-    * Try to submit empty form and required message appears
-    * Try to submit incomplete form and required message appears
-    * Try to submit form with invalid email address based on input pattern and message appears
-    * Enter all fields correctly and upon clicking submit, the page refreshed (A submission message is a feature left to implement)
+    * Go to "Contact" section.
+    * Try to submit empty form and required message appears.
+    * Try to submit incomplete form and required message appears.
+    * Try to submit form with invalid email address based on input pattern and message appears.
+    * Enter all fields correctly and upon clicking submit, the page refreshed (A submission message is a feature left to implement).
 
 ### Other Bugs and Problems
 
@@ -225,14 +227,11 @@ My site has been deployed on GitHub pages. The site can be found [here]().
 
 ## Credits
 
-### Contents:
-
-* 
-
 ### Media:
 
-* 
+* [Header image](https://github.com/vdgvzr/milestone-project---2/blob/master/assets/img/food.jpeg) and [about section](https://github.com/vdgvzr/milestone-project---2/blob/master/assets/img/about-section.jpeg)
+images were found for free on the [Adobe stock](https://stock.adobe.com/uk/) website.
 
 ### Acknowledgements
 
-* 
+* I took design and UI inspiration for this project from the [Just Eat](https://stock.adobe.com/uk/) website.
