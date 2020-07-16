@@ -159,9 +159,7 @@ This has been left unfixed.
 ### Responsiveness
 
 To test the responsiveness of the site, Chrome Developer Tools and the [Am I Responsive](http://ami.responsivedesign.is/) test site were used.
-The use of Bootstrap and general CSS for layout proved successful across several devices. However, going down to the smallest available sized device with a width of 320px proved problematic. To ensure functionality on a screen size this small, a media query was used within the CSS
-with a level of success. Normally, bootstrap and CSS would have been sufficient, however on this occasion due to a mixture of Bootstrap and HTML layout,
-this proved to be the simplest and quickest solution.
+The use of Bootstrap and general CSS for layout proved successful across several devices.
 
 The content looks consistent across all screen sizes. As the API returns a maximum of 10 recipe cards per search page, the card layout was made to look as
 even as possible given the layout of the cards appropriate 'column' and 'row' counts as the screen size changed. This proved to be a challenge at first, however,
