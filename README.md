@@ -203,11 +203,17 @@ build the interactivity of the site.
 may be something to do with the fact that this is a free API and resources may be limited. If a paid, better quality API was used for the project, some of the site's
 functionality and design would be improved significantly. This is a trade-off that was considered when building the project.
 
+* When certain ingredients are typed into the search bar, for example "bacon", the API returns an internal server error message. This is most likely to do with the integration of the
+free API itself, rather than that of the client side. Future versions of the recipeasy website/webapp could utilise a paid for API in order to combat the issues highlighted.
+
 ***
 
 ## Deployment
 
-My site has been deployed on GitHub pages. The site can be found [here](https://vdgvzr.github.io/milestone-project---2/).
+The site has been deplyed using GitHub pages.
+This was achieved through the repository settings and committing the master branch as a source.
+No theme or custom domain was used on this occasion.
+The site can be found [here](https://vdgvzr.github.io/milestone-project---2/).
 
 ***
 

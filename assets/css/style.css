@@ -250,9 +250,14 @@ input:focus, textarea {
 
 .contact-section {
     height: 75vh;
-    background-color: #929293;
+    background: url("../img/contact-section.jpeg") no-repeat top center;
+    overflow: hidden;
+    object-fit: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
     text-align: center;
-
 }
 
 .contact-title {
@@ -269,6 +274,10 @@ input:focus, textarea {
 
 .submit {
     margin-top: 8px;
+}
+
+.jumbotron {
+    background-color: rgba(0,0,0,0.8);
 }
 
 /*------------------------------------------------footer*/
