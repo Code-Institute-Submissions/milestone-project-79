@@ -10,7 +10,7 @@ what can I make with what I have left?
 The premise is simple - enter the ingredients you have left into the search bar, and the site will return to you a list of recipes that you can make with what you have.
 Even if you don't have everything, it's a step in the right direction.
 
-I will utilise JavaScript and jQuery to provide the interactiivity of the site and to communicate with a recipe database API which should return all of the information
+I will utilise JavaScript and jQuery to provide the interactiivity of the site and to communicate with a recipe database API which should return information
 required for any potential users.
 
 ***
@@ -76,8 +76,6 @@ High-resolution wireframes can be found [here](./assets/mockups/recipeasy-mockup
 
 * [emailjs](https://www.emailjs.com/) - Used as an email service for the contact form.
 
-* [Markup Validation](https://validator.w3.org/) - Used to validate HTML code.
-
 * [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code.
 
 * [Am I Responsive?](http://ami.responsivedesign.is/) - Used to quickly see how the responsive design looked across all media.
@@ -85,6 +83,29 @@ High-resolution wireframes can be found [here](./assets/mockups/recipeasy-mockup
 ***
 
 ## Testing
+
+### Manual Testing
+
+My first step in manual testing the site was to verify the validity of the HTML, CSS and JavaScript code.
+
+* HTML
+
+The HTML code was run through the [W3C Markup Validation Service](https://validator.w3.org/). Although no errors were 
+presented, there were warnings regarding the use of semantic elements. For example, h1 headings were used within section
+elements instead of h2-h6. Upon modifying the code, the HTML was run through the validator with no errors or warnings to show.
+
+* CSS
+
+As with the HTML, the CSS was run through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/). Upon running the test,
+there were no errors or warnings to show.
+
+* JavaScript
+
+Both main.js and sendEmail.js were tested using [jshint](https://jshint.com/). The test returned no major issues and advised that the
+jQuery selector within the template literals used to target the API data (${results['results'][i]}) would be better written as dot notation - 
+(${results.results[i]}).
+
+While running the website, the console log returned [warnings](https://github.com/vdgvzr/milestone-project--2/blob/master/assets/img/console-warnings.png?raw=true) specific to the security of the links of the recipes returned from the API
 
 Used jshint to test js
 Am I responsive?
