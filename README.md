@@ -44,7 +44,9 @@ High-resolution wireframes can be found [here](https://github.com/vdgvzr/milesto
 
 ### Features Left to Implement
 
-* 
+* An "auto-suggest" feauture for the search bar which suggests ingredients to the user based on the the actual ingredients data contained within the API.
+
+* Message to the user indicating that form has been submitted.
 
 ***
 
@@ -158,10 +160,60 @@ To test the UX and interactivity of the site, I asked a friend to use the site a
 The peer test resulted in two major changes that could be made to the site. Firstly, it revealed a bug in which if the defensive programming
 protocol of "no recipe found" was returned, then the pagination buttons would disappear for any search performed after that.
 
+Secondly, although ingredients can be easily inputted into the search bar, there is no indication of whether plurals or indeed the ingredient
+itself will actually return a result in the first place. To rectify this, an "auto-suggest" feature within the search bar calling on the
+ingredients data itself from the API would provide the best solution to this. Such a feature would fall into the "Features Left to Implement" category.
+This has been left unfixed.
+
+### Responsiveness
+
+In order to test responsiveness of the site, Chrome Developer Tools and the [Am I Responsive](http://ami.responsivedesign.is/) test site were used.
+The use of Bootstrap and general CSS for layout proved successful across a number of devices. However, going down to the smallest available sized
+devide with a width of 320px proved problematic. In order to ensure functionality on a screen size this small, a media query was used within the CSS
+with a level of success. Normally, bootstrap and CSS would have been sufficient, however on this occasion due to a mixture of Bootstrap and HTML layout,
+this proved to be the simplest and quickest solution.
+
+The content looks consistent across all screen sizes. As the API returns a maximum of 10 recipe cards per search page, the card layout was made to look as
+even as possible given the layout of the cards appropriate 'column' and 'row' counts as the screen size changed. This proved to be a challenge at first, however
+this was achieved by creating a space in the centre of the page using Bootstrap columns and centering the content (cards) within that.
+
+### Test Driven Development
+
+It was intended that a Jasmine testing suite was to be used to test the JavaScript code as the site was being built, however as time progressed it became
+clear that this was not going to be necessary so the suite was removed. The Javascript was iterated using Chrome Devloper Tools to systematically run, test and
+build the interactivity of the site.
+
 ### Testing Scenarios
 
-1. 
-    * 
+1. Search Bar
+    * Click on search bar
+    * Submit empty search bar to return error message - "Please enter your ingredients above!"
+    * Enter an ingredient that doesn not exist to return error message - "We can't find what you're looking for!"
+    * Enter ingredient or ingredients list and press either the enter key or click on the search button to return recipes
+
+2. Pagination buttons
+    * Search for recipe
+    * Click on disbaled Prev button - no action
+    * Click on enabled Next button - moves to page 2, page 3 etc.
+    * Search for a recipe list with fewer results - click to page where there is less than 10 results (indicating the last of the data), click on Next button - no action.
+
+3. Page links
+    * Click on a page link to go to specific page section by IDE
+    * Page scrolls to appropriate section
+
+4. Contact form
+    * Go to "Contact" section
+    * Try to submit empty form and required message appears
+    * Try to submit incomplete form and required message appears
+    * Try to submit form with invalid email address based on input pattern and message appears
+    * Enter all fields correctly and upon clicking submit, the page refreshed (A submission message is a feature left to implement)
+
+### Other Bugs and Problems
+
+* One inetersting bug that has been persistent throughout the project is the resolution of the images returned from the API within the recipe cards. The size of the
+images within the design are intended to be a consistent size, however the actual image quality returned from this API in particular is that of a thumbnail size. This
+may be something to do with the fact that this is a free API and resources may be limited. If a paid, better quality API was used for the project, some of the site's
+funcionality and desgin would be improved significantly. This is a trde-off that was considered when building the project.
 
 ***
 

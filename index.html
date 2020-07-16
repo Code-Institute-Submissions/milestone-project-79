@@ -109,7 +109,7 @@
                 <form onsubmit="return sendMail(this);">
                     <input type="text" name="name" id="fullName" class="form-control box-shadow" placeholder="Name" required>
 
-                    <input type="email" name="email" id="emailAddress" class="form-control box-shadow" placeholder="Email" required>
+                    <input type="email" name="email" id="emailAddress" class="form-control box-shadow" placeholder="Email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
 
                     <textarea name="message" id="message" class="form-control box-shadow" placeholder="Message" cols="30" rows="10" required></textarea>
                     
