@@ -1,18 +1,20 @@
 let page = 1;
+
+/**
+ * Enter key for search bar to trigger recipe search as most users
+ * will be used to pressing enter to trigger search as well as using 
+ * the search button
+ */
 const input = document.getElementById("ingredients");
-
-//-----------------------------------------------------Input Logic
-
-/* Enter key for search bar to trigger recipe search as most users
-    will be used to pressing enter to trigger search as well as using 
-    the search button */
 input.addEventListener("keyup", function(event) {
     if(event.keyCode === 13) {
         fetchRecipeInformation();
     }
 });
 
-// Previous button pagination
+/** 
+ * Previous button pagination
+ */ 
 function prevPage() {
     if(page > 1) {
         page--;
@@ -22,7 +24,9 @@ function prevPage() {
     return page;
 }
 
-// Next button pagination
+/**
+ * Next button pagination
+ */
 function nextPage() {
     if(page >= 1) {
         page++;
@@ -32,23 +36,27 @@ function nextPage() {
     return page;
 }
 
-/* Remove buttons from display if there is an error message to provide
-    an indicator of which API page the user is currently on */
+/** 
+ * Remove buttons from display if there is an error message to provide
+ * an indicator of which API page the user is currently on
+ */
 function removeButtons() {
     $("#previous").addClass("d-none");
     $("#next").addClass("d-none");
 }
 
-/* Add the pagination buttons back onto the page if previous search
-    resulted in an error message */
+/** 
+ * Add the pagination buttons back onto the page if previous search
+ * resulted in an error message
+ */
 function addButtons() {
     $("#previous").removeClass("d-none");
     $("#next").removeClass("d-none");
 }
 
-//-----------------------------------------------------Presentation Logic
-
-// Function call to write search results to index.html in array form.
+/** 
+ * Function call to write search results to index.html in array form.
+ */
 function recipeInformationHTML(results) {
     let arr = [];
     let i;
@@ -92,9 +100,9 @@ function recipeInformationHTML(results) {
     return arr;
 }
 
-//-----------------------------------------------------Processing Logic
-
-// Main search function API call
+/** 
+ * Main search function API call
+ */
 function fetchRecipeInformation() {
     const api = "https://recipe-puppy.p.rapidapi.com/";
     let ingredients = $("#ingredients").val();

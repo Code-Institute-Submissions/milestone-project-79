@@ -68,7 +68,6 @@ input:focus, textarea {
 /*------------------------------------------------Search Bar*/
 
 .search-wrapper {
-    height: 20vh;
     position: relative;
     justify-content: center;
     margin-top: -10vh;
@@ -279,38 +278,4 @@ input:focus, textarea {
 .footer {
     height: 10vh;
     background-color: #333333;
-}
-
-/*------------------------------------------------Media Queries*/
-
-/* I tried to avoid using a media query for smaller devices,
-    however, because of the positioning of the search box,
-    using media queries to deal with the content sizing proved
-    to be the only way to make the site responsive on devices
-    with a max width of 576px. */
-    
-@media screen and (max-width: 576px) {
-    html {
-        font-size: 10px;
-    }
-
-    .hero-image {
-        height: 200px;
-    }  
-
-    .search-box {
-        width: 200px;
-    }
-
-    .search-title {
-        font-size: 12px;
-    }
-
-    .search-subtitle {
-        font-size: 8px;
-    }
-
-    #ingredients {
-        height: 24px;
-    }
 }
