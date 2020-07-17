@@ -217,7 +217,7 @@ improve the overall functionality of the site.
 The site has been deplyed using GitHub pages.
 This was achieved through the repository settings and committing the master branch as a source.
 No theme or custom domain was used on this occasion.
-The site can be found [here](https://vdgvzr.github.io/milestone-project---2/).
+The site can be found [here](https://vdgvzr.github.io/milestone-project-2/).
 
 ***
 
