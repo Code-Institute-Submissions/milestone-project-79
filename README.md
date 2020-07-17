@@ -204,6 +204,12 @@ functionality and design would be improved significantly. This is a trade-off th
 * When certain ingredients are typed into the search bar, for example "bacon", the API returns an internal server error message. This is most likely to do with the integration of the
 free API itself, rather than that of the client side. Future versions of the recipeasy website/webapp could utilise a paid for API in order to combat the issues highlighted.
 
+* When clicking on certain recipes, sometimes the external sites don't exist or won't respond. Again, this is an issue to do with the data being accessed from the API and not the client side
+and may not be as much of an issue with a more legitimate API.
+
+In conclusion, most of the main functionality issues could be solved by using a different API. In the real world, if money was to be made from this site, a paid API would be the best way to
+improve the overall functionality of the site.
+
 ***
 
 ## Deployment
@@ -219,9 +225,9 @@ The site can be found [here](https://vdgvzr.github.io/milestone-project---2/).
 
 ### Media:
 
-* [Header image](https://github.com/vdgvzr/milestone-project---2/blob/master/assets/img/food.jpeg) and [about section](https://github.com/vdgvzr/milestone-project---2/blob/master/assets/img/about-section.jpeg)
-images were found for free on the [Adobe stock](https://stock.adobe.com/uk/) website.
+* [Header image](https://github.com/vdgvzr/milestone-project---2/blob/master/assets/img/food.jpeg), [about section](https://github.com/vdgvzr/milestone-project---2/blob/master/assets/img/about-section.jpeg)
+and [contact section](https://github.com/vdgvzr/milestone-project-2/blob/master/assets/img/contact-section.jpeg) images were found for free on the [Adobe stock](https://stock.adobe.com/uk/) website.
 
 ### Acknowledgements
 
-* I took some design and UI inspiration for this project from the [Just Eat](https://stock.adobe.com/uk/) website.
+* I took some design and UI inspiration for this project from [Just Eat](https://stock.adobe.com/uk/).
