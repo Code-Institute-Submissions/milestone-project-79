@@ -207,8 +207,8 @@ free API itself, rather than that of the client side. Future versions of the rec
 * When clicking on certain recipes, sometimes the external sites don't exist or won't respond. Again, this is an issue to do with the data being accessed from the API and not the client side
 and may not be as much of an issue with a more legitimate API.
 
-In conclusion, most of the main functionality issues could be solved by using a different API. In the real world, if money was to be made from this site, a paid API would be the best way to
-improve the overall functionality of the site.
+In conclusion, most of the main functionality issues could be solved by using a different API. In the real world, if money was to be made from this site, a paid API would seem the best way to
+improve the overall functionality.
 
 ***
 
