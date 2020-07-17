@@ -25,6 +25,10 @@ input:focus, textarea {
     outline: none;
 }
 
+.col-12 {
+    padding: 0;
+}
+
 /*------------------------------------------------Navbar*/
 
 .navbar-toggler {
@@ -135,6 +139,7 @@ input:focus, textarea {
 }
 
 .recipe-card {
+    width: 250px;
     display: flex;
     justify-content: space-between;
     margin: 0px 10px 10px;
@@ -153,27 +158,21 @@ input:focus, textarea {
 }
 
 .card-image {
-    max-width: 100%;
     background: no-repeat center center fixed;
     overflow: hidden;
     object-fit: cover;
 }
 
-.card-title-box {
-    text-align: center;
-    width: 100px;
-    height: 30px;
-}
-
 .card-title {
+    padding: 8px;
     font-family: 'Open Sans Condensed', sans-serif;
-    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     color: #929293;
-    margin: 12px 0 0 0;
+    text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0 10px;
 }
 
 .pagination-container {

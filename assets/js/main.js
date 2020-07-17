@@ -84,12 +84,21 @@ function recipeInformationHTML(results) {
 
     for(i = 0; i < recipes.length; i++) {
         arr.push(`
-            <div class="recipe-card box-shadow d-block ">
-                <a href="${results.results[i].href}" target="_blank">
-                    <img class="card-image" src="${results.results[i].thumbnail}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'" alt="recipe" width="250" height="150"/>
-                </a>
-                <div class="card-title-box">
-                    <h6 class="card-title">${results.results[i].title}</h6>
+            <div class="recipe-card box-shadow d-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="${results.results[i].href}" target="_blank">
+                                <img class="card-image" src="${results.results[i].thumbnail}" onerror="this.onerror=null; this.src='./assets/img/alt.jpeg'" alt="recipe" width="250" height="150"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h6 class="card-title my-auto">${results.results[i].title}</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         `);
